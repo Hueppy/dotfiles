@@ -1,0 +1,29 @@
+#!/bin/sh
+
+CWD=$(pwd)
+
+SRC_DIR=$(realpath $(dirname $0)/config)
+DEST_DIR=$HOME/.config
+
+if ! test -d $DEST_DIR 
+then
+    mkdir $DEST_DIR
+fi
+
+cd $SRC_DIR
+
+for f in *
+do
+    CONF_SRC=$SRC_DIR/$f
+    CONF_DEST=$DEST_DIR/$f
+
+    if test -d $CONF_DEST || test -f $CONF_DEST
+    then 
+        echo $CONF_DEST already exists
+    else 
+        ln -sv $CONF_SRC $CONF_DEST
+    fi
+
+done
+
+cd $CWD

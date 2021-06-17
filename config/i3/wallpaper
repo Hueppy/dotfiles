@@ -1,0 +1,6 @@
+#!/bin/sh
+
+WALLPAPERS=$(realpath $(dirname $0)/../wallpapers)
+WALLPAPER=$(shuf -n1 -e $WALLPAPERS/*.{jpg,png})
+
+feh --bg-scale $WALLPAPER
