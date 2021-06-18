@@ -1,6 +1,10 @@
 #!/bin/sh
 
 CMD=$(compgen -c | fzf -e -i --reverse --print-query | tail -n1)
-nohup sh -c "$CMD" &
-sleep 0.01s
+
+if test "$CMD" 
+then
+    nohup sh -c "$CMD" &
+    sleep 0.01s
+fi
 
