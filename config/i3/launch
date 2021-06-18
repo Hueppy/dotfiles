@@ -1,3 +1,6 @@
 #!/bin/sh
 
-compgen -c | fzf --reverse | xargs nohup
+CMD=$(compgen -c | fzf -e -i --reverse --print-query | tail -n1)
+nohup sh -c "$CMD" &
+sleep 0.01s
+
