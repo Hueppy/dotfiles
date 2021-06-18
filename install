@@ -1,29 +1,33 @@
 #!/bin/sh
 
-CWD=$(pwd)
+create_links () {
+    SRC_DIR=$1
+    DEST_DIR=$2
 
-SRC_DIR=$(realpath $(dirname $0)/config)
-DEST_DIR=$HOME/.config
-
-if ! test -d $DEST_DIR 
-then
-    mkdir $DEST_DIR
-fi
-
-cd $SRC_DIR
-
-for f in *
-do
-    CONF_SRC=$SRC_DIR/$f
-    CONF_DEST=$DEST_DIR/$f
-
-    if test -d $CONF_DEST || test -f $CONF_DEST
-    then 
-        echo $CONF_DEST already exists
-    else 
-        ln -sv $CONF_SRC $CONF_DEST
+    if ! test -d $DEST_DIR
+    then
+        mkdir $DEST_DIR
     fi
 
-done
+    cd $SRC_DIR
 
-cd $CWD
+    for f in *
+    do
+        CONF_SRC=$SRC_DIR$f
+        CONF_DEST=$DEST_DIR$f
+
+        if test -d $CONF_DEST || test -f $CONF_DEST
+        then
+            echo $CONF_DEST already exists
+        else
+            ln -sv $CONF_SRC $CONF_DEST
+        fi
+    done
+}
+
+
+SRC_BASE=$(realpath $(dirname $0))
+DEST_BASE=$HOME
+
+create_links $SRC_BASE/config/ $DEST_BASE/.config/
+create_links $SRC_BASE/home/ $DEST_BASE/.
