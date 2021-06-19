@@ -1,5 +1,5 @@
 # run .profile for login shells
-[ -o login ] && . $HOME/.profilea
+[ -o login ] && . $HOME/.profile
 
 
 # Functions
