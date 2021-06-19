@@ -116,7 +116,6 @@ _prompt() {
 # Common options
 HISTFILE=$HOME/.history
 HISTSIZE=4096
-CDPATH=.:$HOME:/
 
 # Keybindings
 bind ^[a=beginning-of-line
