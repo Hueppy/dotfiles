@@ -110,7 +110,7 @@ _prompt() {
     RPWD="${PWD/#"$HOME"/\~}"
     PRMPT="$(if (( USER_ID )); then print \$; else print \#; fi)"
 
-    $PRINT "\033[${RET}m$RPWD\033[0m $PRMPT "
+    $PRINT "\033[${RET}m$RPWD\033[0m $PRMPT"
 }
 
 # Common options
