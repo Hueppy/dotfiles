@@ -1,0 +1,16 @@
+export LC_CTYPE=en_US.UTF-8
+export TZ=Europe/Berlin
+
+export PATH=$PATH:~/.local/bin
+export GOPATH=$HOME/.go
+export XDG_DATA_HOME=$HOME/.config
+
+export EDITOR=vim
+export VISUAL=$EDITOR
+export PAGER='less -R'
+export BROWSER=open
+export MANWIDTH=80
+
+export CC=cc
+export DEBUGGER=gdb
+export TRACER=ktrace
