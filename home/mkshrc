@@ -54,21 +54,21 @@ alias ll="ls -alhF"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
-alias pg=$PAGER
-alias db=$DEBUGGER
-alias cc=$CC
-alias trace=$TRACER
-alias j=jobs
-alias h=history
-alias b=bg
-alias f=fg
-alias p=pwd
-alias u=whoami
-alias Z=exit
+alias pg="$PAGER"
+alias db="$DEBUGGER"
+alias cc="$CC"
+alias trace="$TRACER"
+alias j="jobs"
+alias h="history"
+alias b="bg"
+alias f="fg"
+alias p="pwd"
+alias u="whoami"
+alias Z="exit"
 alias ,="ls -1"
 
 # logs
