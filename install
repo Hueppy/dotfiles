@@ -31,3 +31,5 @@ DEST_BASE=$HOME
 
 create_links $SRC_BASE/config/ $DEST_BASE/.config/
 create_links $SRC_BASE/home/ $DEST_BASE/.
+
+ln -sv $SRC_BASE/wallpapers $DEST_BASE/wallpapers
