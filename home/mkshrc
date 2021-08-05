@@ -1,7 +1,3 @@
-# run .profile for login shells
-[ -o login ] && . $HOME/.profile
-
-
 # Functions
 # set graphics rendition
 sgr() {
