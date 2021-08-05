@@ -3,6 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.config/polybar/launch.sh &
 compton --vsync opengl --backend glx --blur-background &
+feh --bg-fill --randomize ~/wallpapers/*
 nm-applet &
 mpd
 
