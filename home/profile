@@ -7,10 +7,10 @@ export XDG_DATA_HOME=$HOME/.config
 
 export EDITOR=vim
 export VISUAL=$EDITOR
-export PAGER='less -R'
+#export PAGER='less -R'
 export BROWSER=open
 export MANWIDTH=80
 
 export CC=cc
-export DEBUGGER=gdb
+#export DEBUGGER=gdb
 export TRACER=ktrace
