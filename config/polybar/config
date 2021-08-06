@@ -29,6 +29,8 @@ magenta = #ae81ff
 cyan = #a1efe4
 
 [bar/main]
+monitor = ${env:MONITOR:}
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
