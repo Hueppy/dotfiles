@@ -45,7 +45,7 @@ font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = mpd-info
-modules-right = mpd-controls pulseaudio filesystem cpu memory date powermenu
+modules-right = mpd-controls pulseaudio filesystem cpu memory battery date powermenu
 
 tray-position = right
 tray-offset-y = -2
@@ -135,7 +135,27 @@ format-prefix = ""
 format-prefix-foreground = ${colors.magenta}
 
 label = %gb_used:10%
+[module/battery]
+type = internal/battery
 
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+
+; Disable polling by setting the interval to 0.
+; ;
+; Default: 5
+poll-interval = 5
 [module/date]
 type = internal/date
 interval = 1
