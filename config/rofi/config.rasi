@@ -1,28 +1,38 @@
 * {
-  bg: #272822;
-  fg: #f8f8f2;
-  accent: #f4bf75;
-   
-  background-color: @bg;
-  text-color: @fg;
+    background: rgba (  0,   0,   0, 0%);
+    foreground: rgba (248, 248, 242, 100%);
+    lightbg:    rgba (117, 113,  94, 95%);
+    lightfg:    rgba (248, 248, 242, 100%);
+
+    blue:       rgba (102, 217, 239, 100%);
+    green:      rgba (166, 226,  46, 100%);
+	orange:     rgba (244, 191, 117, 100%);
+	purple:     rgba (174, 129, 255, 100%);
+    red:        rgba (249,  38, 114, 100%);
+
+    font:       "IBM Plex Mono 12"; 
+
+	active-foreground:           @purple;
+	normal-foreground:           @foreground;
+	urgent-foreground:           @red;
+    selected-active-background:  @background;
+    selected-active-foreground:  @blue;
+    selected-normal-background:  @background;
+    selected-normal-foreground:  @green;
+    selected-urgent-background:  @background;
+    selected-urgent-foreground:  @orange;
+    alternate-active-background: @background;
+	alternate-active-foreground: @purple;
+    alternate-normal-background: @background;
+	alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @background;
+	alternate-urgent-foreground: @red;
 }
 
-prompt, entry {
-  text-color: #a6e22e;
-  padding: 8px;
+window {
+    background-color: rgba (39, 40, 34, 95%);
 }
 
-prompt {
-    background-color: @accent;
-    text-color: @bg;
-    margin: 0 0 10px 0;
-}
-
-element {
-  padding: 6px 4px;
-}
-
-element selected {
-  background-color: @fg;
-  text-color: @bg;
+listview {
+    border: 0px 0px 0px;
 }
