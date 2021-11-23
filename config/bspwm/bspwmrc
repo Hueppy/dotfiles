@@ -6,6 +6,7 @@ picom --vsync --backend xrender -b
 feh --bg-fill --randomize ~/wallpapers/*
 nm-applet &
 mpd
+ibus-daemon -drx
 
 wmname LG3D
 
