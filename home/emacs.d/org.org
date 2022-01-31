@@ -1,0 +1,8 @@
+* Org mode
+#+BEGIN_SRC emacs-lisp
+  (use-package org
+    :custom
+    (org-startup-indented t)
+    :config
+    (add-hook 'org-mode-hook #'visual-line-mode))
+#+END_SRC

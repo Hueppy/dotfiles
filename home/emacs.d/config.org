@@ -1,0 +1,25 @@
+#+STARTUP: overview
+#+TITLE: Weeeee
+#+LANGUAGE: en
+#+OPTIONS: num:nil
+
+* Appearance
+#+BEGIN_SRC emacs-lisp
+  (load-config-file "appearance.org")
+#+END_SRC
+* Editor
+#+BEGIN_SRC emacs-lisp
+  (load-config-file "editor.org")
+#+END_SRC
+* Org mode
+#+BEGIN_SRC emacs-lisp
+  (load-config-file "org.org")
+#+END_SRC
+* Plugins
+#+BEGIN_SRC emacs-lisp
+  (load-config-file "plugins.org")
+#+END_SRC
+* Programming
+#+BEGIN_SRC emacs-lisp
+  (load-config-file "programming.org")
+#+END_SRC

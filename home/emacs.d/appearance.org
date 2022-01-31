@@ -1,0 +1,31 @@
+* Theme
+#+BEGIN_SRC emacs-lisp
+  (use-package nord-theme
+    :ensure t)
+
+  (load-theme 'nord t)
+#+END_SRC
+* Font
+#+BEGIN_SRC emacs-lisp
+  (set-face-attribute 'default t :family "IBM Plex Mono")
+#+END_SRC
+* Transparency
+#+BEGIN_SRC emacs-lisp
+  (set-frame-parameter (selected-frame) 'alpha 0.95)
+#+END_SRC
+* Mode Line
+#+BEGIN_SRC emacs-lisp
+  (use-package nano-modeline
+    :ensure t
+    :custom
+    (nano-modeline-position 'bottom)
+    :config
+    (nano-modeline-mode t))
+#+END_SRC
+
+* Gui Elements
+#+BEGIN_SRC emacs-lisp
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+#+END_SRC

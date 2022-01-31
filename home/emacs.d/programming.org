@@ -1,0 +1,110 @@
+* LSP
+#+BEGIN_SRC emacs-lisp
+  (use-package lsp-mode
+    :ensure t
+    :diminish
+    :custom
+    (lsp-completion-provider :capf)
+    :bind
+    ("S-<f2>" . lsp-rename)
+    ("S-<f3>" . lsp-execute-code-action)
+    :hook (
+      (lsp-mode . lsp-enable-which-key-integration)
+      (prog-mode . lsp-deferred)
+    )
+    :commands (lsp lsp-deffered))
+
+  (use-package lsp-ui
+    :ensure t
+    :custom
+    (lsp-ui-doc-show-with-mouse nil)
+    (lsp-ui-doc-position 'bottom)
+    :bind
+    ([remap xref-find-definitions] . lsp-ui-peek-find-defintions)
+    ([remap xref-find-references] . lsp-ui-peek-find-references)
+    ("<f12>"   . lsp-ui-peek-find-definitions)
+    ("S-<f12>" . lsp-ui-peek-find-references)
+    :commands lsp-ui-mode)
+#+END_SRC
+* DAP
+#+BEGIN_SRC emacs-lisp
+  (use-package dap-mode
+    :ensure t
+    :bind
+    ("<f5>" . dap-debug)
+    ("<f9>" . dap-breakpoint-toggle)
+    ("<f10>" . dap-next)
+    ("<f11>" . dap-step-in)
+    ("S-<f11>" . dap-step-out)
+    :custom
+    (dap-auto-configure-features '(sessions locals repl tooltip))
+    (dap-auto-configure-mode t)
+    (dap-netcore-install-dir "~/.local/share")
+    :config
+    (require 'dap-gdb-lldb)
+    (require 'dap-netcore))
+#+END_SRC
+* Company
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :ensure t
+    :diminish
+    :bind
+    ("C-SPC" . company-manual-begin)
+    :custom
+    (company-idle-delay 0)
+    (company-minimum-prefix-length 3))
+#+END_SRC
+* Yasnippet
+#+BEGIN_SRC emacs-lisp
+  (use-package yasnippet
+    :ensure t
+    :diminish yas-minor-mode
+    :hook
+    (prog-mode . yas-minor-mode)
+    :config
+    (yas-reload-all))
+
+  (use-package yasnippet-snippets
+    :ensure t)
+#+END_SRC
+* Flycheck
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck
+    :ensure t
+    :init (global-flycheck-mode))
+#+END_SRC
+* Projectile
+#+BEGIN_SRC emacs-lisp
+  (use-package projectile
+    :ensure t
+    :custom
+    (projectile-project-root-files-bottom-up '(".projectile" "platformio.ini" ".git")))
+#+END_SRC
+* PlatformIO
+#+BEGIN_SRC emacs-lisp
+  (use-package platformio-mode
+    :ensure t
+    :hook
+    ((c-mode c++-mode) . platformio-conditionally-enable)
+  )
+#+END_SRC
+* C/C++
+#+BEGIN_SRC emacs-lisp
+  (use-package ccls
+    :ensure t)
+#+END_SRC
+* C#
+#+BEGIN_SRC emacs-lisp
+  (use-package csharp-mode
+    :ensure t
+    :hook
+    (csharp-mode . lsp-deferred))
+#+END_SRC
+
+* Rust
+#+BEGIN_SRC emacs-lisp
+  (use-package rustic
+    :ensure t
+  )
+#+END_SRC
