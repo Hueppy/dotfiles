@@ -6,7 +6,7 @@ xrandr --output DP-0 --mode 2560x1440 --rate 164.83 --primary \
 xset -dpms
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-~/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh
 picom --vsync --backend xrender -b
 feh --bg-fill --randomize ~/wallpapers/*
 nm-applet &

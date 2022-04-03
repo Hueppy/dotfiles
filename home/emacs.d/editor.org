@@ -57,3 +57,7 @@
 #+BEGIN_SRC emacs-lisp
 (setq create-lockfiles nil)
 #+END_SRC
+* Warning level
+#+BEGIN_SRC emacs-lisp
+  (setq warning-minimum-level :emergency)
+#+END_SRC
