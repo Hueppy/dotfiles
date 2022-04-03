@@ -54,7 +54,8 @@
     :init
     (ido-mode 1)
     :custom
-    (ido-enable-flex-matching nil)
+    (ido-auto-merge-work-directories-length -1)
+    (ido-confirm-unique-completion t)
     (ido-create-new-buffer 'always)
     (ido-everywhere t))
 
