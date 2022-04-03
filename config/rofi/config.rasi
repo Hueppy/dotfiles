@@ -1,14 +1,14 @@
 * {
     background: rgba (  0,   0,   0, 0%);
-    foreground: rgba (248, 248, 242, 100%);
+    foreground: rgba (216, 222, 233, 100%);
     lightbg:    rgba (117, 113,  94, 95%);
-    lightfg:    rgba (248, 248, 242, 100%);
+    lightfg:    rgba (236, 239, 244, 100%);
 
-    blue:       rgba (102, 217, 239, 100%);
-    green:      rgba (166, 226,  46, 100%);
-	orange:     rgba (244, 191, 117, 100%);
-	purple:     rgba (174, 129, 255, 100%);
-    red:        rgba (249,  38, 114, 100%);
+    blue:       rgba ( 94, 129, 172, 100%);
+    green:      rgba (163, 190, 140, 100%);
+	orange:     rgba (208, 135, 112, 100%);
+	purple:     rgba (180, 142, 173, 100%);
+    red:        rgba (191,  97, 106, 100%);
 
     font:       "IBM Plex Mono 12"; 
 
@@ -30,7 +30,7 @@
 }
 
 window {
-    background-color: rgba (39, 40, 34, 95%);
+    background-color: rgba (46, 52, 64, 95%);
 }
 
 listview {

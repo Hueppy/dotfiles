@@ -17,16 +17,16 @@
 ;==========================================================
 
 [colors]
-background = #272822
-background-alt = #75715e
-foreground = #f8f8f2
-foreground-alt = #f9f8f5
-red = #f92672
-green = #a6e22e
-yellow = #f4bf75
-blue = #66d9ef
-magenta = #ae81ff
-cyan = #a1efe4
+background = #2e3440
+background-alt = #4c566a
+foreground = #d8dee9
+foreground-alt = #eceff4
+red = #bf616a
+green = #a3be8c
+yellow = #ebcb8b
+blue = #81a1c1
+magenta = #b48ead
+cyan = #88c0d0
 
 [bar/main]
 monitor = ${env:MONITOR:}
