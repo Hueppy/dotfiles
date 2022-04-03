@@ -32,18 +32,26 @@
   (use-package dap-mode
     :ensure t
     :bind
-    ("<f5>" . dap-debug)
+    ("<f5>" . dap-debug-last)
+    ("S-<f5>" . dap-disconnect)
     ("<f9>" . dap-breakpoint-toggle)
     ("<f10>" . dap-next)
     ("<f11>" . dap-step-in)
     ("S-<f11>" . dap-step-out)
     :custom
-    (dap-auto-configure-features '(sessions locals repl tooltip))
+    (dap-auto-configure-features '(sessions locals tooltip))
     (dap-auto-configure-mode t)
     (dap-netcore-install-dir "~/.local/share")
     :config
     (require 'dap-gdb-lldb)
-    (require 'dap-netcore))
+    (require 'dap-netcore)
+    (defun dap-create-launch-json ()
+      (interactive)
+      (let ((dap-template-filename
+        (pcase major-mode
+          ('c++-mode "launch-c++.json")
+          (default   "launch.json"))))
+        (copy-file (concat "~/.emacs.d/dap-template/" dap-template-filename) (concat (lsp-workspace-root) "/launch.json")))))
 #+END_SRC
 * Company
 #+BEGIN_SRC emacs-lisp
