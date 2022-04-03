@@ -81,7 +81,10 @@
 #+BEGIN_SRC emacs-lisp
   (use-package flycheck
     :ensure t
-    :init (global-flycheck-mode))
+    :init (global-flycheck-mode)
+    :custom
+    (flycheck-verilator-include-path '("/usr/local/share/yosys" "/usr/local/share/yosys/ice40"))
+  )
 #+END_SRC
 * Projectile
 #+BEGIN_SRC emacs-lisp
