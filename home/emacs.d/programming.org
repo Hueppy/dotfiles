@@ -5,12 +5,13 @@
     :diminish
     :custom
     (lsp-completion-provider :capf)
+    (lsp-enable-on-type-formatting nil)
     :bind
     ("S-<f2>" . lsp-rename)
     ("S-<f3>" . lsp-execute-code-action)
     :hook (
       (lsp-mode . lsp-enable-which-key-integration)
-      (prog-mode . lsp-deferred)
+      ((c-mode c++-mode csharp-mode rustic-mode js-jsx-mode python-mode) . lsp-deferred)
     )
     :commands (lsp lsp-deffered))
 
