@@ -5,7 +5,7 @@ export PATH=~/.local/bin:~/.cargo/bin:~/.local/share/gcc-arm-none-eabi/bin:/home
 export GOPATH=$HOME/.go
 export XDG_DATA_HOME=$HOME/.config
 
-export EDITOR=vim
+export EDITOR='emacsclient -t -a ""'
 export VISUAL=$EDITOR
 #export PAGER='less -R'
 #export BROWSER=
